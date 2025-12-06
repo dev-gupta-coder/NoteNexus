@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Note Editor - Professional Note Taking App</title>
-    <link rel="stylesheet" href="note.css">
+    <link rel="stylesheet" href="temp.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header background-color="green" class="header">
         <div class="header-content">
             <div class="header-left">
                 <div class="logo">
@@ -17,7 +17,7 @@
                 <span class="brand">Notes</span>
             </div>
             
-            <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <button id="darkModeToggle" class="theme-toggle" aria-label="Toggle dark mode" >
                 <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <circle cx="12" cy="12" r="5"></circle>
                     <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -47,8 +47,8 @@
                         type="text" 
                         id="noteTitle" 
                         class="note-title" 
-                        placeholder="Untitled"
-                        value="Untitled Note"
+                        placeholder="write"
+                        value="Note Title"
                     >
                 </div>
 
@@ -85,7 +85,7 @@
                         </svg>
                     </button>
 
-                    <div class="toolbar-divider"></div>
+                    <div class="toolbar-divider" ></div> <!-- Edited to add green color to divider -->
 
                     <!-- Headings -->
                     <button class="toolbar-btn" data-command="h1" title="Heading 1">
@@ -141,12 +141,6 @@
                     <div class="toolbar-divider"></div>
 
                     <!-- Other formatting -->
-                    <button class="toolbar-btn" data-command="quote" title="Quote block">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
-                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
-                        </svg>
-                    </button>
                     
                     <button class="toolbar-btn" data-command="code" title="Code">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -175,7 +169,7 @@
                             Saving...
                         </span>
                         <span class="saved-indicator">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="16" height="16"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="20 6 9 17 4 12"></polyline>
                             </svg>
                             Saved just now
@@ -184,16 +178,18 @@
                 </div>
 
                 <!-- Content Area -->
+                <div class="start-text">   Start Your Good Note...</div>
                 <div 
                     id="noteContent" 
                     contenteditable="true" 
                     class="content-area"
+                    
                 >
-                    <p>Start writing your note here...</p>
+                    <p placeholder="Start..." ></p>
                 </div>
 
                 <!-- Footer with stats -->
-                <div class="editor-footer">
+                <div class="editor-footer" >
                     <div class="stats">
                         <span id="wordCount">0 words</span>
                         <span id="charCount">0 characters</span>
@@ -203,36 +199,13 @@
         </div>
 
         <!-- Sidebar -->
-        <div class="sidebar">
+        <div class="sidebar" >
             <div class="sidebar-card">
-                <!-- Folder Selector -->
-                <div class="sidebar-section">
-                    <label class="sidebar-label">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                        <span>Folder</span>
-                    </label>
-                    <div class="select-wrapper">
-                        <select id="folderSelect" class="sidebar-select">
-                            <option value="general">General</option>
-                            <option value="work">Work</option>
-                            <option value="personal">Personal</option>
-                            <option value="projects">Projects</option>
-                            <option value="archive">Archive</option>
-                        </select>
-                        <svg class="select-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </div>
-                </div>
-
                 <!-- Tag Manager -->
                 <div class="sidebar-section">
                     <label class="sidebar-label">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
                         </svg>
                         <span>Tags</span>
                     </label>
@@ -241,9 +214,8 @@
                         type="text" 
                         id="tagInput" 
                         class="sidebar-input" 
-                        placeholder="Add tag and press Enter"
-                    >
-
+                        placeholder="Add tag and press Enter" >
+                    <!-- tag me enter karo and then ye tags aa jayenge like idea , draft -->
                     <div id="tagContainer" class="tag-container">
                         <span class="tag">
                             ideas
@@ -267,7 +239,7 @@
                 </div>
 
                 <!-- Pin Toggle -->
-                <div class="sidebar-section">
+                <!-- <div class="sidebar-section"style="background-color: #10b981">
                     <div class="pin-toggle">
                         <span class="pin-label">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -280,10 +252,10 @@
                             <span class="toggle-slider"></span>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Color Label -->
-                <div class="sidebar-section">
+                <!-- <div class="sidebar-section">
                     <label class="sidebar-label">Color Label</label>
                     <div class="color-grid" id="colorGrid">
                         <button class="color-option active" data-color="default" data-value="#9ca3af">
@@ -311,7 +283,7 @@
                             <span>Yellow</span>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Note Info -->
                 <div class="sidebar-section sidebar-divider">
@@ -356,22 +328,17 @@
                     </div>
                     
                     <div class="related-notes">
-                        <a href="#" class="related-note">
-                            <div class="related-title">Meeting Notes - Dec 4</div>
-                            <div class="related-preview">Discussed project timeline and deliverables...</div>
-                        </a>
-                        <a href="#" class="related-note">
-                            <div class="related-title">Research: Note-taking Apps</div>
-                            <div class="related-preview">Comparison of Notion, Craft, and Obsidian features...</div>
-                        </a>
-                        <a href="#" class="related-note">
-                            <div class="related-title">Design System Guidelines</div>
-                            <div class="related-preview">Typography scale, color palette, and spacing...</div>
-                        </a>
+                        <!-- yaha ai ka use kar sakte h -->
                     </div>
+
                 </div>
-            </div>
+            </div> 
+             <div  >
+                    <button class="save-btn" >Save</button>
+                </div>
+            
         </div>
+        
     </div>
 
     <script src="note.js"></script>

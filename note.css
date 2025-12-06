@@ -2,12 +2,14 @@
 
 /* Reset and Base Styles */
 * {
+    /* background-color: #10b981; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
+    background-color: #10b981;
     /* Light mode colors */
     --bg-primary: #f9fafb;
     --bg-secondary: #ffffff;
@@ -200,6 +202,8 @@ body.dark-mode .logo {
 }
 
 .toolbar-btn {
+    background-color: green;
+
     padding: 0.5rem;
     border: none;
     background: transparent;
@@ -277,7 +281,6 @@ body.dark-mode .logo {
     margin: 1rem 0; padding-left: 1rem;
     border-left: 4px solid var(--border-color);
     font-style: italic; opacity: 0.85; color: var(--text-secondary);
-    background-color: green;
 }
 
 .content-area pre {
@@ -348,6 +351,17 @@ body.dark-mode .logo {
     .toolbar { padding: 0.75rem 1rem; }
     .content-area { padding: 1.5rem; }
     .editor-footer { padding: 0.75rem 1.5rem; }
+}
+
+/* active state */
+.toolbar-btn.active {
+    background-color: rgba(255, 255, 255, 0.12);  /* light for dark mode */
+    color: var(--text-primary);
+}
+
+/* light mode support */
+body:not(.dark-mode) .toolbar-btn.active {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 
