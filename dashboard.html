@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NoteNexus - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
+</head>
+<body>
+  <div id="app">
+    <!-- Left Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <!-- Logo -->
+        <div class="logo-section">
+          <div class="logo-container">
+            <div class="logo-icon">
+              <i data-lucide="file-text"></i>
+            </div>
+            <span class="logo-text">NoteNexus</span>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav-section">
+          <button class="nav-item active" data-nav="all">
+            <i data-lucide="file-text"></i>
+            <span>All Notes</span>
+          </button>
+
+          <button class="nav-item" data-nav="favorites">
+            <i data-lucide="star"></i>
+            <span>Favorites</span>
+          </button>
+
+          <!-- Folders Section -->
+          <div class="folders-section">
+            <button class="nav-item folders-toggle">
+              <i data-lucide="chevron-down" class="chevron"></i>
+              <i data-lucide="folder"></i>
+              <span class="flex-1">Folders</span>
+            </button>
+
+            <div class="folders-list">
+              <button class="folder-item">
+                <span>Work Projects</span>
+                <span class="folder-count">12</span>
+              </button>
+              <button class="folder-item">
+                <span>Personal</span>
+                <span class="folder-count">8</span>
+              </button>
+              <button class="folder-item">
+                <span>Ideas</span>
+                <span class="folder-count">15</span>
+              </button>
+            </div>
+          </div>
+
+          <button class="nav-item new-folder-btn">
+            <i data-lucide="plus"></i>
+            <span>New Folder</span>
+          </button>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Navigation Bar -->
+      <header class="top-nav">
+        <div class="top-nav-content">
+          <!-- Search Bar -->
+          <div class="search-container">
+            <i data-lucide="search" class="search-icon"></i>
+            <input type="text" placeholder="Search notes..." class="search-input">
+          </div>
+
+          <!-- New Note Button -->
+          <button class="new-note-btn">
+            <i data-lucide="plus"></i>
+            <span>New Note</span>
+          </button>
+
+          <!-- Dark Mode Toggle -->
+          <button class="icon-btn" id="darkModeToggle">
+            <i data-lucide="moon"></i>
+          </button>
+
+          <!-- User Profile Avatar -->
+          <button class="user-avatar">
+            JD
+          </button>
+        </div>
+      </header>
+
+      <!-- Notes Grid -->
+      <main class="notes-container">
+        <div class="notes-header">
+          <h1>All Notes</h1>
+          <p class="notes-count">6 notes</p>
+        </div>
+
+        <div class="notes-grid" id="notesGrid">
+          <!-- Note cards will be inserted here by JavaScript -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
