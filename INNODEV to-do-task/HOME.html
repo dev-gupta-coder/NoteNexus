@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteNexus - Write instantly. Organize effortlessly.</title>
+    <link rel="stylesheet" href="HOME.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="gradient-blob blob-1"></div>
+      <div class="gradient-blob blob-2"></div>
+
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            Write instantly.<br />
+            Organize effortlessly.
+          </h1>
+          <p class="hero-subtitle">
+            NoteNexus is your intelligent workspace for capturing ideas,
+            organizing thoughts, and finding everything instantly.
+          </p>
+
+          <div class="button-group" href="dashboard.html">
+            <a id="launchAppBtn" class="btn" href="./notenexus/dashboard.html">
+              <button class="btn btn-primary" href="dashboard.html">
+                Launch App
+              </button>
+            </a>
+            <button class="btn btn-outline">
+              <span class="btn-outline-text">Add Chrome Extension</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- App Mockup -->
+        <div class="app-mockup">
+          <div class="mockup-glow"></div>
+
+          <div class="glass-panel main-panel">
+            <!-- Header bar -->
+            <div class="panel-header">
+              <div class="window-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <div class="address-bar">
+                <div class="address-bar-text"></div>
+              </div>
+            </div>
+
+            <!-- Content area -->
+            <div class="panel-content">
+              <div class="sidebar">
+                <div class="sidebar-item active"></div>
+                <div class="sidebar-item"></div>
+                <div class="sidebar-item"></div>
+                <div class="sidebar-item"></div>
+                <div class="sidebar-item"></div>
+              </div>
+
+              <div class="main-content">
+                <div class="content-header"></div>
+                <div class="content-lines">
+                  <div class="line line-1"></div>
+                  <div class="line line-2"></div>
+                  <div class="line line-3"></div>
+                  <div class="line line-4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating panels -->
+          <div class="glass-panel floating-panel panel-1">
+            <div class="floating-header green"></div>
+            <div class="floating-line line-1"></div>
+            <div class="floating-line line-2"></div>
+            <div class="floating-line line-3"></div>
+          </div>
+
+          <div class="glass-panel floating-panel panel-2">
+            <div class="floating-header pink"></div>
+            <div class="floating-line small line-1"></div>
+            <div class="floating-line small line-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <div class="features-grid">
+          <!-- exact copy — replace the old Quick Notes block with this -->
+          <a
+            id="quickNoteLink"
+            href="./notenexus/popup.html"
+            class="feature-card-link"
+            title="Open Quick Notes"
+          >
+            <div class="feature-card" id="quickNotesCard">
+              <div class="feature-glow purple"></div>
+
+              <div class="feature-icon purple">
+                <!-- SVG -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+
+              <h3 class="feature-title">Quick Notes</h3>
+              <p class="feature-description">
+                Capture ideas instantly with lightning-fast note creation
+              </p>
+            </div>
+          </a>
+
+          <div class="feature-card">
+            <div class="feature-glow pink"></div>
+            <div class="feature-icon pink">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"
+                />
+                <circle cx="12" cy="13" r="3" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Screenshot-to-Note</h3>
+            <p class="feature-description">
+              Convert screenshots directly into editable notes
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-glow cyan"></div>
+            <div class="feature-icon cyan">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Instant Search</h3>
+            <p class="feature-description">
+              Find any note in milliseconds with powerful search
+            </p>
+          </div>
+
+
+          <!-- <div class="feature-card">
+            <div class="feature-glow indigo"></div>
+            <div class="feature-icon indigo">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+              </svg>
+            </div> -->
+            <!-- <h3 class="feature-title">Dark Mode</h3>
+            <p class="feature-description">
+              Easy on the eyes with beautiful dark themes
+            </p> -->
+          </div>
+
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <div class="logo-icon">N</div>
+            <span class="logo-text">NoteNexus</span>
+          </div>
+          <p class="footer-text">
+            © 2025 NoteNexus. Your thoughts, beautifully organized.
+          </p>
+          <div class="footer-links">
+            <a href="#" class="footer-link">Privacy</a>
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+
+    <script src="HOME.js"></script>
+  </body>
+</html>

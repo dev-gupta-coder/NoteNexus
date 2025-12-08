@@ -1,0 +1,17 @@
+
+{
+  "manifest_version": 3,
+  "name": "NoteNexus (Simple)",
+  "version": "1.0",
+  "description": "Quick note-taking popup + dashboard (localStorage).",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "NoteNexus"
+  },
+  "options_ui": {
+    "page": "dashboard.html",
+    "open_in_tab": true
+  },
+  "permissions": []
+}
+

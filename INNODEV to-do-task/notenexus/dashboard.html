@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NoteNexus Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container row">
+    <aside class="sidebar card">
+      <div class="title">NoteNexus</div>
+      <div class="sub">All your notes — quick & organized</div>
+
+      <div style="margin-bottom:10px;">
+        <input id="search" placeholder="Search notes..." class="input" />
+      </div>
+
+      <div style="margin-bottom:12px;">
+        <div style="font-weight:600; margin-bottom:6px;">Folders</div>
+        <div id="folders" class="inline" style="flex-direction:column;"></div>
+      </div>
+
+      <div style="margin-top:8px;">
+        <button id="new-note-btn" class="btn small" style="width:100%;">New Note</button>
+      </div>
+
+      <div class="footer" style="margin-top:12px;">
+        Auto-save: <strong>localStorage</strong><br/>
+        Sync: optional (Firebase later)
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="card" style="margin-bottom:12px;">
+        <div class="row" style="justify-content:space-between; align-items:center;">
+          <div>
+            <div style="font-weight:600">Dashboard</div>
+            <div class="sub" id="notes-count">0 notes</div>
+          </div>
+          <div class="inline">
+            <button id="open-popup" class="btn secondary small" title="Quick note">Quick Note</button>
+            <button id="clear-all" class="btn secondary small" style="color:var(--danger); border-color:#fee2e2;">Clear All</button>
+          </div>
+        </div>
+      </div>
+
+      <section id="pinned-area"></section>
+
+      <section id="notes-area"></section>
+    </main>
+  </div>
+
+  <!-- Edit modal (hidden) -->
+  <div id="modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+    <div class="card" style="width:680px; max-width:95%;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <div style="font-weight:600" id="modal-title">Edit Note</div>
+        <div>
+          <button id="modal-close" class="icon-btn">Close</button>
+        </div>
+      </div>
+
+      <div style="margin-bottom:8px;">
+        <input id="m-title" class="input" placeholder="Title" />
+      </div>
+      <div style="margin-bottom:8px;">
+        <textarea id="m-body" class="input" placeholder="Note body" rows="8"></textarea>
+      </div>
+
+      <div style="display:flex; gap:8px; align-items:center; justify-content:space-between;">
+        <div>
+          <select id="m-folder" class="input small">
+            <option>General</option><option>Study</option><option>Personal</option><option>Ideas</option>
+          </select>
+          <label style="margin-left:8px; color:var(--muted); font-size:13px;">
+            <input type="checkbox" id="m-pin" /> Pin
+          </label>
+        </div>
+        <div>
+          <button id="m-delete" class="btn small" style="background:var(--danger); margin-right:8px;">Delete</button>
+          <button id="m-save" class="btn small">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

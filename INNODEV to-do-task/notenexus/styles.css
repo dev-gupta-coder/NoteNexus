@@ -1,0 +1,59 @@
+/* styles.css - simple clean UI */
+:root {
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --danger: #ef4444;
+  --radius: 12px;
+  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:#0f172a; font-size:14px; }
+
+/* Common container */
+.container { padding:16px; max-width:980px; margin:14px auto; }
+
+/* Popup-specific */
+.popup { width:320px; }
+.card { background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); padding:12px; }
+.hrow { display:flex; gap:8px; align-items:center; }
+.input, textarea, select {
+  width:100%;
+  border:1px solid #e6e9ef;
+  padding:8px 10px;
+  border-radius:8px;
+  font-size:14px;
+  background:white;
+}
+textarea { resize:vertical; min-height:80px; }
+
+.btn {
+  background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:8px; cursor:pointer;
+}
+.btn.secondary { background:white; color:var(--accent); border:1px solid #e6e9ef; }
+.small { font-size:13px; padding:6px 8px; border-radius:7px; }
+
+/* Dashboard layout */
+.row { display:flex; gap:12px; }
+.sidebar { width:220px; }
+.main { flex:1; }
+
+.title { font-weight:600; margin-bottom:6px; }
+.sub { color:var(--muted); font-size:13px; margin-bottom:12px; }
+
+/* Note cards */
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:12px; }
+.note { padding:12px; border-radius:12px; background:linear-gradient(0deg,rgba(255,255,255,0.8),rgba(255,255,255,0.8)); border:1px solid #eef2ff; min-height:120px; display:flex; flex-direction:column; justify-content:space-between; }
+.note .meta { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.note .body { color:#374151; font-size:13px; white-space:pre-wrap; overflow:hidden; max-height:64px; }
+.note .tags { color:var(--muted); font-size:12px; margin-top:8px; }
+
+/* small utilities */
+.inline { display:inline-flex; gap:8px; align-items:center; }
+.icon-btn { background:transparent; border:none; cursor:pointer; color:var(--muted); font-size:13px; padding:4px 6px; }
+.search { display:flex; gap:8px; align-items:center; margin-bottom:12px; }
+.footer { margin-top:14px; color:var(--muted); font-size:12px; }
+.empty { text-align:center; color:var(--muted); padding:28px; border-radius:10px; background:#fff; border:1px dashed #e6e9ef; }
